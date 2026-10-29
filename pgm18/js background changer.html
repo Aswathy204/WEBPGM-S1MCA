@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Background Changer</title>
+<style>
+body{
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+min-height:100vh;
+margin:0;
+}
+</style>
+</head>
+<body>
+<button onClick="changeColor()">Change Color</button>
+<button onClick="changeBackgroundImage()">Change Background Image</button>
+<button onClick="resetBackground()">Resume to Normal</button>
+<script>
+const originalColor="white";
+const originalImage="";
+function changeColor() {
+document.body.style.backgroundImage="";
+document.body.style.backgroundColor="lightgreen";
+}
+
+function changeBackgroundImage() {
+document.body.style.backgroundImage="url('https://static.vecteezy.com/system/resources/thumbnails/027/582/393/small_2x/ai-generated-a-pride-of-lions-in-the-savanna-photo.jpg')";
+document.body.style.backgroundColor="";
+}
+
+function resetBackground() {
+document.body.style.backgroundColor=oroiginalColor;
+document.body.style.backgroundImage=oroginalImage;
+}
+</script>
+</body>
+</html>
